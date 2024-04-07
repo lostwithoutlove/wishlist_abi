@@ -1,4 +1,8 @@
-npx create-next-app --typescript
+# All input commands
+
+1. npx create-next-app --typescript
+2. npm install -D tailwindcss postcss autoprefixer
+3. npx tailwindcss init -p
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
