@@ -25,7 +25,10 @@ const Navbar = () => {
                     md:gap-0
                     "
           >
-            <Logo />
+            <p className="flex">
+              <Logo />
+            </p>
+
             <Search />
             <UserMenu />
           </div>

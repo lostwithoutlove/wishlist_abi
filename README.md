@@ -3,6 +3,7 @@
 1. npx create-next-app --typescript
 2. npm install -D tailwindcss postcss autoprefixer
 3. npx tailwindcss init -p
+4. npm install react-icons
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
