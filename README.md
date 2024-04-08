@@ -9,6 +9,12 @@
 7. npm install axios
 8. npm install react-hook-form
 9. npm install react-hot-toast
+10. npm install -D prisma
+11. npx prisma init
+12. npx prisma db push
+13. npm install next-auth @prisma/client @next-auth/prisma-adapter
+14. npm install bcrypt
+15. npm install -D @types/bcrypt
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
