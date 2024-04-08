@@ -3,6 +3,7 @@
 import { Listing } from "@prisma/client";
 import { SafeUser } from "@/app/types";
 import LinkPreview from "./LinkPreview";
+import { useRouter } from "next/navigation";
 
 type User = {
   createdAt: string;
@@ -24,9 +25,13 @@ type ListingCardProps = {
 
 const ListingCard: React.FC<ListingCardProps> = ({ data }) => {
   const price = data.price;
+  const router = useRouter();
 
   return (
-    <div className="gap-2 hover:bg-slate-300 cursor-pointer group">
+    <div
+      className="gap-2 hover:bg-slate-300 cursor-pointer group"
+      onClick={() => window.open(data.url, "_blank")}
+    >
       <LinkPreview
         url={data.url}
         price={price}
