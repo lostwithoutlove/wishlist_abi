@@ -15,6 +15,8 @@
 13. npm install next-auth @prisma/client @next-auth/prisma-adapter
 14. npm install bcrypt
 15. npm install -D @types/bcrypt
+16. npm install query-string
+17. npm install cheerio
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
