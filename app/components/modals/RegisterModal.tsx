@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { useCallback, useState } from "react";
 import { toast } from "react-hot-toast";
@@ -40,7 +40,7 @@ const RegisterModal = () => {
         loginModal.onOpen();
       })
       .catch((error) => {
-        toast.error(error);
+        toast.error("Something went wrong");
       })
       .finally(() => {
         setIsLoading(false);
@@ -94,10 +94,17 @@ const RegisterModal = () => {
       />
       <Button
         outline
+        label="Continue with Facebook"
+        icon={AiFillFacebook}
+        onClick={() => signIn("github")}
+      />
+      <Button
+        outline
         label="Continue with Github"
         icon={AiFillGithub}
         onClick={() => signIn("github")}
       />
+
       <div
         className="
           text-neutral-500 
