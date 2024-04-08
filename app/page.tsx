@@ -26,7 +26,7 @@ export default async function Home({ searchParams }: any) {
     <ClientOnly>
       <Container>
         <div className="">
-          <div className="gap-4 pt-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-7">
+          <div className="gap-4 pt-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-7 ">
             {" "}
             {listings.map((listing) => (
               <div className=" ">

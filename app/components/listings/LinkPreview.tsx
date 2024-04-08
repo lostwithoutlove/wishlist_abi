@@ -3,6 +3,7 @@ import { LinkPreviewData, replaceSpecialCharacters } from "@/utils/helpers";
 import React, { useState, useEffect } from "react";
 import IconInput from "../inputs/IconInput";
 import { RiInstagramFill } from "react-icons/ri";
+import Image from "next/image";
 
 interface LinkPreviewProps {
   url: string;
@@ -68,12 +69,19 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
 
   return (
     // navigate to listing page with id as title
-    <div className=" hover:bg-red-100">
+    <div className=" hover:bg-slate-100 cursor-pointer group ">
       <a href={`listings/${slug}?id=${id}`} className="" target="_blank">
-        <div className="bg-red-100">
-          {image && <img src={image} alt={title} className="object-cover" />}
+        <div className=" justify-center">
+          {image && (
+            <img
+              src={image}
+              alt={title}
+              width={200}
+              className="object-cover hover:scale-110 "
+            />
+          )}
         </div>
-        <div className="">
+        <div className="m-2">
           <div className="font-semibold text-sm ">{brand}</div>
           <div className=" text-sm truncate">{product}</div>
           <div className="font-semibold text-sm hover:font-bold">
@@ -81,12 +89,6 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
           </div>
         </div>
       </a>
-      <div className="">
-        <IconInput
-          callback={onSubmitIconInput}
-          iconComponent={<RiInstagramFill />}
-        />
-      </div>
     </div>
   );
 };

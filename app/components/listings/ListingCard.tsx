@@ -27,16 +27,14 @@ const ListingCard: React.FC<ListingCardProps> = ({ data }) => {
   const price = data.price;
 
   return (
-    <div className="gap-2 hover:bg-slate-300">
-      <div className=" hover:bg-slate-900">
-        <LinkPreview
-          url={data.url}
-          price={price}
-          product={data.product}
-          brand={data.brand}
-          id={data.id}
-        />
-      </div>
+    <div className="gap-2 hover:bg-slate-300 cursor-pointer group">
+      <LinkPreview
+        url={data.url}
+        price={price}
+        product={data.product}
+        brand={data.brand}
+        id={data.id}
+      />
     </div>
   );
 };
