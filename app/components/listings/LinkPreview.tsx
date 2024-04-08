@@ -65,22 +65,23 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
 
   /*<h3>{title}</h3> taken from inside the return function */
   const slug = replaceSpecialCharacters((brand + " " + title).toLowerCase());
+
   return (
     // navigate to listing page with id as title
-    <div>
-      <a
-        href={`listings/${slug}?id=${id}`}
-        className="bg-blue border hover:shadow"
-        target="blank"
-      >
-        {image && <img src={image} alt={title} />}
-        <div className="p-2">
-          <div className="font-semibold text-lg">{brand}</div>
-          <div className="text-sm">{product}</div>
-          <div className="font-semibold text-ml"> {price}</div>
+    <div className=" hover:bg-red-100">
+      <a href={`listings/${slug}?id=${id}`} className="" target="_blank">
+        <div className="bg-red-100">
+          {image && <img src={image} alt={title} className="object-cover" />}
+        </div>
+        <div className="">
+          <div className="font-semibold text-sm ">{brand}</div>
+          <div className=" text-sm truncate">{product}</div>
+          <div className="font-semibold text-sm hover:font-bold">
+            Rs.{price}
+          </div>
         </div>
       </a>
-      <div className="row-start-auto">
+      <div className="">
         <IconInput
           callback={onSubmitIconInput}
           iconComponent={<RiInstagramFill />}

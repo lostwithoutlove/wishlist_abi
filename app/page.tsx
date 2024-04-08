@@ -25,10 +25,11 @@ export default async function Home({ searchParams }: any) {
   return (
     <ClientOnly>
       <Container>
-        <div className="flex">
-          <div className="pt-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-7 gap-10">
-            <div className="text-gray-500 text-sm gap-10">
-              {listings.map((listing) => (
+        <div className="">
+          <div className="gap-4 pt-20 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 2xl:grid-cols-7">
+            {" "}
+            {listings.map((listing) => (
+              <div className=" ">
                 <ListingCard
                   currentUser={currentUser}
                   key={listing.id}
@@ -37,8 +38,8 @@ export default async function Home({ searchParams }: any) {
                   brand={listing.brand}
                   product={listing.product}
                 ></ListingCard>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

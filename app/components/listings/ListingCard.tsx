@@ -25,16 +25,19 @@ type ListingCardProps = {
 
 const ListingCard: React.FC<ListingCardProps> = ({ data }) => {
   const price = data.price;
-  console.log(price);
 
   return (
-    <LinkPreview
-      url={data.url}
-      price={price}
-      product={data.product}
-      brand={data.brand}
-      id={data.id}
-    />
+    <div className="gap-2 hover:bg-slate-300">
+      <div className=" hover:bg-slate-900">
+        <LinkPreview
+          url={data.url}
+          price={price}
+          product={data.product}
+          brand={data.brand}
+          id={data.id}
+        />
+      </div>
+    </div>
   );
 };
 export default ListingCard;
