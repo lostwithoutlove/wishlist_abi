@@ -95,7 +95,7 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
                 <MenuItem label="Admin Dashboard" onClick={() => {}} />
                 <MenuItem label="Settings" onClick={() => {}} />
                 <MenuItem label="Wish. List. Share." onClick={() => {}} />
-                <MenuItem label="Logout" onClick={() => {}} />
+                <MenuItem label="Logout" onClick={() => signOut()} />
               </>
             ) : (
               <>
