@@ -80,7 +80,7 @@ const LinkPreview: React.FC<LinkPreviewProps> = ({
           <div className="font-semibold text-ml"> {price}</div>
         </div>
       </a>
-      <div className="row-start-auto m-4">
+      <div className="row-start-auto">
         <IconInput
           callback={onSubmitIconInput}
           iconComponent={<RiInstagramFill />}
