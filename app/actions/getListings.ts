@@ -4,7 +4,7 @@ import prisma from "@/app/libs/prismadb";
 //const userId = getCurrentUser().id;
 //console.log("userID", userId);
 
-export interface ListingsIParams {
+export interface IListingsParams {
   userId?: string;
   listingId?: string;
   product?: string;
@@ -13,7 +13,7 @@ export interface ListingsIParams {
   category?: string;
 }
 
-export default async function getListings(params: ListingsIParams = {}) {
+export default async function getListings(params: IListingsParams = {}) {
   try {
     const { category, userId } = params;
     if (!userId) {

@@ -2,16 +2,22 @@ import Image from "next/image";
 import Container from "./components/Container";
 import ClientOnly from "./components/ClientOnly";
 import EmptyState from "./components/EmptyState";
-import getListings from "@/app/actions/getListings";
 import getCurrentUser from "./actions/getCurrentUser";
 import ListingCard from "./components/listings/ListingCard";
+import { SafeUser } from "./types";
+import getListings, { IListingsParams } from "@/app/actions/getListings";
+
+interface HomeProps {
+  searchParams: IListingsParams;
+  currentUser?: SafeUser | null;
+}
 
 export default async function Home({ searchParams }: any) {
   const category = searchParams?.category;
   const currentUser = await getCurrentUser();
   const listings = await getListings({ category, userId: currentUser?.id });
 
-  const isEmpty = true;
+  //const isEmpty = true;
   //if (isEmpty) {
 
   if (listings.length === 0) {

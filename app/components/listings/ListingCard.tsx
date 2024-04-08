@@ -13,7 +13,6 @@ type User = {
   email: string | null;
   image: string | null;
   hashedPassword: string | null;
-  favoriteIDs: string[];
 } | null;
 type ListingCardProps = {
   data: Listing;
