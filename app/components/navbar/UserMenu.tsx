@@ -3,9 +3,20 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 import { useCallback, useState } from "react";
+import { useRouter } from "next/navigation";
+
 import MenuItem from "./MenuItems";
 
+import useLoginModal from "@/app/hooks/useLoginModal";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
+
 const UserMenu = () => {
+  const currentUser = 0;
+  const router = useRouter();
+
+  const loginModal = useLoginModal();
+  const registerModal = useRegisterModal();
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
@@ -72,14 +83,21 @@ const UserMenu = () => {
           "
         >
           <div className="flex flex-col cursor-pointer">
-            <>
-              <MenuItem label="Wishlist" onClick={() => {}} />
-              <MenuItem label="My Orders" onClick={() => {}} />
-              <MenuItem label="Admin Dashboard" onClick={() => {}} />
-              <MenuItem label="Settings" onClick={() => {}} />
-              <MenuItem label="Wish. List. Share." onClick={() => {}} />
-              <MenuItem label="Logout" onClick={() => {}} />
-            </>
+            {currentUser ? (
+              <>
+                <MenuItem label="Wishlist" onClick={() => {}} />
+                <MenuItem label="My Orders" onClick={() => {}} />
+                <MenuItem label="Admin Dashboard" onClick={() => {}} />
+                <MenuItem label="Settings" onClick={() => {}} />
+                <MenuItem label="Wish. List. Share." onClick={() => {}} />
+                <MenuItem label="Logout" onClick={() => {}} />
+              </>
+            ) : (
+              <>
+                <MenuItem label="Login" onClick={loginModal.onOpen} />
+                <MenuItem label="Sign up" onClick={registerModal.onOpen} />
+              </>
+            )}
           </div>
         </div>
       )}

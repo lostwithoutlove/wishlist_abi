@@ -4,6 +4,10 @@
 2. npm install -D tailwindcss postcss autoprefixer
 3. npx tailwindcss init -p
 4. npm install react-icons
+5. npm install zustand
+6. npm install axios
+7. npm install react-hook-form
+8. npm install react-hot-toast
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
